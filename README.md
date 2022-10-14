@@ -6,6 +6,8 @@ Acoustic-to-articulatory inversion (AAI) requires parallel acoustic and articula
 
 ## Acknowledgements
 The primary methodology for this project (i.e. the preprocessing of data and the building of neural networks) is based on two papers that explore speaker dependent AAI with deep neural networks, one of which was trained using raw ultrasound tongue imaging data [(Porras et al., 2019)](https://arxiv.org/abs/1904.06083) and the other was trained using MRI articulator data [(Csapó, 2020)](https://arxiv.org/abs/2008.02098). The Keras implementation of the MRI experiment by Csapó is publicly available on GitHub as [speech2mri](https://github.com/BME-SmartLab/speech2mri) and has been adapted for this project after being shown to produce decent results on its intended task. This project also made use of GitHub repositories [Ultrasuite-Tools](https://github.com/UltraSuite/ultrasuite-tools) (Eshky, 2019) and [TaL-Tools](https://github.com/UltraSuite/tal-tools) (Ribeiro, 2020) for various data processing tools related to the [Tongue and Lips (TaL) corpus](https://arxiv.org/abs/2011.09804) (Ribeiro et al., 2021). Some of these tools have been added to the `tools/` directory. `tools/animate_utterance.py` has been slightly modified from its original version.
+Tongue conture feature extraction uses the [DeepLabCut models](https://github.com/articulateinstruments/DeepLabCut-for-Speech-Production) built by Wrench, A. and Balch-Tomes, J. (2022) from [Markerless pose estimation of speech articulators from ultrasound tongue images and lip video](https://doi.org/10.3390/s22031133).
+
 
 ## Contents
 `job_scripts/` contain various bash scripts to run preprocessing and training jobs on UoE server Eddie.
