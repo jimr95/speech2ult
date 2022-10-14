@@ -12,7 +12,7 @@ Tongue contour feature extraction uses the [DeepLabCut models](https://github.co
 ## Contents
 `job_scripts/` contain various bash scripts to run preprocessing and training jobs on UoE server Eddie.
 `preprocess/` contains two python scripts: 
-  - `dlc_analyze.py` is used to extract DeepLabCut tongue and lip features from TAL data en masse
+  - `dlc_analyze.py` is used to extract DeepLabCut tongue and lip features from TAL data en masse.
   -  `preprocess.py` takes a number of command line arguments and preprocesses the TAL data for neural network training and testing to be saved into pickled dictionaries.
 
 `tools/` contains python scripts from [Ultrasuite-Tools](https://github.com/UltraSuite/ultrasuite-tools) and [TaL-Tools](https://github.com/UltraSuite/tal-tools) which are used in the preprocessing and ultrasound visualization scripts.
