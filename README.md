@@ -11,12 +11,23 @@ Tongue contour feature extraction uses the [DeepLabCut models](https://github.co
 
 ## Contents
 `job_scripts/` contain various bash scripts to run preprocessing and training jobs on UoE server Eddie.
-`preprocess/` contains two python scripts: 
+
+`predictions/` contains two directories along with several Jupyter Notebook files:
+  - `models/` contains the data and trained models for each of the specified experiments along with predictions made by each model on the test file.
+  - `test_data` contains the TAL data of three utterances from the test set to be used for model predictions and visualization.
+  - `create_testfile.ipynb` is used to create a testfile data structure which contains all the data for a single test utterance and makes it easier for making predictions with.
+  - `dlc_plotting.ipynb` is an initial notebook used to create dlc videos and plots. The contents of this notebook are improved upon in `figures.ipynb`
+  - `dlc2ult_eval.ipynb` is used to evaluate each audio2dlc model with the dlc2ult model.
+  - `dlc2ult_preds.pickle` are the predictions made in the dlc2ult pipeline which can be used in `make_pred.ipynb` to visualize.
+  - `figures.ipynb` is used to make the figures in my written report.
+  - `make_pred.ipynb` is used to make various types of videos to visualize and compare model predictions.
+
+`preprocess/` contains two python scripts:
   - `dlc_analyze.py` is used to extract DeepLabCut tongue and lip features from TAL data en masse.
   -  `preprocess.py` takes a number of command line arguments and preprocesses the TAL data for neural network training and testing to be saved into pickled dictionaries.
+
+`sample_videos` contains sample videos from model predictions on a test file.
 
 `tools/` contains python scripts from [Ultrasuite-Tools](https://github.com/UltraSuite/ultrasuite-tools) and [TaL-Tools](https://github.com/UltraSuite/tal-tools) which are used in the preprocessing and ultrasound visualization scripts.
 
 `train_model.py` is the main script for training, saving, and evaluating an AAI neural network. It takes the directory where the pickled preprocessed data is stored and the directory where the model should be saved to as command line arguments, along with other optional arguments.
-
-
