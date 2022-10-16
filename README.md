@@ -13,7 +13,6 @@ Tongue contour feature extraction uses the [DeepLabCut models](https://github.co
 `job_scripts/` contain various bash scripts to run preprocessing and training jobs on UoE server Eddie.
 
 `predictions/` contains two directories along with several Jupyter Notebook files:
-  - `models/` contains the data and trained models for each of the specified experiments along with predictions made by each model on the test file.
   - `test_data` contains the TAL data of three utterances from the test set to be used for model predictions and visualization.
   - `create_testfile.ipynb` is used to create a testfile data structure which contains all the data for a single test utterance and makes it easier for making predictions with.
   - `dlc_plotting.ipynb` is an initial notebook used to create dlc videos and plots. The contents of this notebook are improved upon in `figures.ipynb`
